@@ -1,0 +1,20 @@
+import operaciones
+
+def main():
+
+    sum = operaciones.suma(1,2)
+    print(sum)
+
+
+    res = operaciones.resta(5,3)
+    print(res)
+
+
+    multi = operaciones.multiplica(3,4)
+    print(multi)
+
+
+    div = operaciones.divide(9,3)
+    print(div)
+
+if __name__ == '__main__':
