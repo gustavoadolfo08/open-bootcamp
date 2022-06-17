@@ -1,0 +1,24 @@
+from pickle import *
+
+class Vehiculo:
+
+    def __init__(self, motor, puertas):
+        self.motor = motor
+        self.puertas = puertas
+
+    def __str__(self):
+        return self.motor + " " + self.puertas
+
+
+cruze = Vehiculo("gasolina", "4")
+
+
+file = open('vehiculo_objeto', 'w+b')
+
+dump(cruze, file)
+
+file.seek(0)
+cruze = load(file)
+
+print(cruze)
+file.close()
