@@ -1,0 +1,11 @@
+from functools import reduce
+
+def impar(segmento):
+    lista = list(filter((lambda x: x % 2), segmento))
+    print(lista)
+    lista = reduce( (lambda x, y: x + y), lista)
+    print(lista)
+
+segmento = list(range(50))
+
+impar(segmento)
