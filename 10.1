@@ -1,0 +1,28 @@
+from tkinter import *
+
+def seleccionar():
+    monitor.config(text="{}".format(opcion.get()))
+def reset():
+    opcion.set(None)
+    monitor.config(text="")
+
+root = Tk()
+opcion = StringVar()
+opcion.set(None)
+Radiobutton(root, text="Lunes", variable=opcion,
+            value='Lunes', command=seleccionar).pack(anchor=W)
+
+Radiobutton(root, text="Martes", variable=opcion,
+            value='Martes', command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="Miercoles", variable=opcion,
+            value='Miercoles', command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="Jueves", variable=opcion,
+            value='Jueves', command=seleccionar).pack(anchor=W)
+Radiobutton(root, text="Viernes", variable=opcion,
+            value='Viernes', command=seleccionar).pack(anchor=W)
+
+monitor = Label(root)
+monitor.pack()
+Button(root, text="Limpiar", command=reset).pack()
+
+root.mainloop()
