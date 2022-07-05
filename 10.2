@@ -1,0 +1,10 @@
+from tkinter import *
+master = Tk()
+elemento = StringVar()
+listbox = Listbox(master)
+for item in ["Uno", "Dos", "Tres", "Cuatro", "Cinco"]:
+ listbox.insert(END, item)
+listbox.pack()
+label = Label(text="Lista de numeros")
+label.pack()
+master.mainloop()
